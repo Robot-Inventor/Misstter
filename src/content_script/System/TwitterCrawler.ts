@@ -7,7 +7,10 @@ import { Attachment } from '../../common/CommonType';
 
 const getTweetText = () => {
   const textContents = document.querySelectorAll('div[data-testid="tweetTextarea_0"] div[data-block="true"]');
-  if (!textContents) return;
+  if (!textContents.length) {
+    const textArea: HTMLTextAreaElement | null = document.querySelector('textarea[data-testid="tweetTextarea_0"]');
+    return textArea ? textArea.value : undefined;
+  }
   const text = Array.from(textContents).map((textContent) => {
     return textContent.textContent;
   }).join('\n');
