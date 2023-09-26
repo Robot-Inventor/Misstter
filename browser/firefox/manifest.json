@@ -1,9 +1,9 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
 
   "name": "Misstter (fork)",
   "description": "Misstter (fork)",
-  "version": "1.0.7",
+  "version": "1.0.8",
 
   "action": {
     "default_icon": "icon.png",
@@ -35,23 +35,12 @@
   },
 
   "permissions": [
-    "storage"
-  ],
-
-  "host_permissions": [
+    "storage",
     "<all_urls>"
   ],
 
   "web_accessible_resources": [
-    {
-      "resources": [
         "misskey_icon.png"
-      ],
-      "matches": [
-        "https://twitter.com/*",
-        "https://tweetdeck.twitter.com/*"
-      ]
-    }
   ],
 
   "browser_specific_settings": {
